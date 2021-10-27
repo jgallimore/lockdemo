@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <Resource id="testDatasource" type="DataSource">
+        JdbcDriver com.mysql.jdbc.Driver
+        JdbcUrl jdbc:mysql://localhost:3306/test
+        JtaManaged true
+        UserName root
+        Password my-secret-pw
+        initialSize                       2
+        maxActive                         50
+        maxIdle                           5
+        minIdle                           0
+        maxWait                           200
+        validationQuery                   SELECT 1
+        testOnBorrow                      false
+        testOnReturn                      false
+        testWhileIdle                     true
+        timeBetweenEvictionRunsMillis     60000
+        numTestsPerEvictionRun            3
+        minEvictableIdleTimeMillis        120000
+        poolPreparedStatements            true
+        maxOpenPreparedStatements         128
+        jmxEnabled                        true
+        removeAbandoned			  true
+        removeAbandonedTimeout		  120
+        logAbandoned			  true
+    </Resource>
+</resources>
